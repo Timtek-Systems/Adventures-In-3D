@@ -98,7 +98,7 @@ You may measure your maximum acceleration in one of two ways.
 >**Print Quality vs. Print Time**  
 >Print quality is ususally proportional to print time and, by implication, inversely proportional to acceleration and therefore speed. You will often wish to trade off print time against print quality. You will most likely want to create a number of different print profiles relecting this trade-off. It is common to have profiles for "Quality", "Fast" and "Balanced" where each profile would vary the peak acceleration to achieve the desired results. In general, more aggressive acceleration yields shorter print times but lower quality prints.
 
-And finally, note that we have not really considered speed at any point. **Speed is the wrong thing to focus on**. What kills you is the acceleration and volumetric flow. Speed falls out of the physics as a natural consequence of these limitations.
+And finally, note that we have not really considered speed at any point. **Speed is the wrong thing to focus on**. What kills you is the acceleration and volumetric flow. Speed falls out of the physics as a natural consequence of these constraints.
 
 Armed with this information, you are ready to configure your slicer software.
 
@@ -111,12 +111,12 @@ I recommend SuperSlicer [^ss] for this because it has an "Auto-Speed" mode that 
 ### Machine Limits
 
 First, we need to make some global printer settings. In the `Printer Settings` -> `Machine Limits` -> `Maximum accelerations` pane, make sure you;ve entered your absolute highest accelerations. This is used both for print speed estimation, and as a safety limit when generating gcode.
-![[Machine-Limite.png.png]]
+![Machine Limits](images/Machine-Limits.png)
 
 ### Print Settings Profile
 
 In your print profile, under `Print Settings`->`Speed`->`Auto Speed (advanced)`, enter your calculated maximum volumetric flow rate. If you have calculated different values for different filaments, put your highest value here. You can also add a maximum print speed here and this should be the highest speed that you will allow the auto-speed algorithm to use. I usually set this rather high because I expect the auto-speed algorithm to use speeds based on my acceleration settings and there's no need to really limit the speed here.
-![[Global-volumetric-speed.png.png]]
+![Global Volumetric Flow Rate](images/Global-volumetric-speed.png)
 
 >**Make these settings dependent on the nozzle size**.  
 >As maximum volumetric flow rate depends somewhat on nozzle diameter, make sure your print settings profiles depend on a printer profile with a specific nozzle size. You can define dependencies under `Print Settings`->`Dependencies`. There are a number of ways to do this, but I usually do it by directly referencing the nozzle size setting in `Compatible printers conditions` as shown here:
