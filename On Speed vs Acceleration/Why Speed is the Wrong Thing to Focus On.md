@@ -56,11 +56,13 @@ Due to the many contributing factors, it is easiest to determine this by experim
 
 First, determine your maximum extrusion speed (`Emax`) in millimeters per second.
 
-I measure this by manually extruding 100mm of filament at increasing flow rates, until either the extruder starts to skip, or I feel that the extrusion is inconsistent. This can be done by bringing the nozzle up to print temperature, then using the printer's UI to manually extrud filament.  In Fluidd, I do this using the Tool tab:
+I measure this by manually extruding 100mm of filament at increasing flow rates, until either the extruder starts to skip, or I feel that the extrusion is inconsistent. This can be done by bringing the nozzle up to print temperature, then using the printer's UI to manually extrude filament.  In Fluidd, I do this using the Tool tab:
 
 ![Fluidd extruder controls](images/Fluidd-extruder-controls.png)
 
 Then I back off a bit to give a margin for safety, and call that my maximum extrusion speed, `Emax`.
+
+Others (such as Stefan from CNC Kitchen) have done this by weighing the extruded filament and noting when the amount extruded begins to fall off. This seems like a good objective approach to me, but unfortunately I don't have scales with high enough precision.
 
 ### Calculate Maximum Volumetric Flow Rate
 
