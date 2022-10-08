@@ -76,7 +76,7 @@ From this, we can calculate:
 $$\textrm{filament radius }r=\frac{D_f}{2}$$
 $$\textrm{filament cross-sectional area } a = \pi r^2$$
 $$\textrm{volumetric flow rate } V = a \times E$$
-To find maximum volumetric flow rate, first find your maximum extrusion speed ($E_{max}$) by experiment. Then use the above formulae to compute $V_{max}$, your maximum volumetric flow rate.
+To find maximum volumetric flow rate, first find your maximum extrusion speed $E_{max}$ by experiment. Then use the above formulae to compute $V_{max}$, your maximum volumetric flow rate.
 
 >**Nozzle Diameter**  
 >Note that nozzle diameter is not used anywhere in the computation. In practice, the results will be affected by the nozzle size, especially for smaller nozzles, because it takes more pressure to force the viscous molten filament through a smaller aperture and your extruder will need to work harder and will stall sooner. Therefore, this process is best performed for each nozzle size that you wish to use.
